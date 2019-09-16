@@ -1,0 +1,9 @@
+C:\Users\CDS07\source\repos\ApiClient\ApiClient\ApiClient\bin\Debug\netstandard2.0\ApiClient.deps.json
+C:\Users\CDS07\source\repos\ApiClient\ApiClient\ApiClient\bin\Debug\netstandard2.0\ApiClient.dll
+C:\Users\CDS07\source\repos\ApiClient\ApiClient\ApiClient\obj\Debug\netstandard2.0\ApiClient.csprojAssemblyReference.cache
+C:\Users\CDS07\source\repos\ApiClient\ApiClient\ApiClient\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\CDS07\source\repos\ApiClient\ApiClient\ApiClient\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\CDS07\source\repos\ApiClient\ApiClient\ApiClient\obj\Debug\netstandard2.0\Views\NewPage.xaml.g.cs
+C:\Users\CDS07\source\repos\ApiClient\ApiClient\ApiClient\obj\Debug\netstandard2.0\ApiClient.csproj.CoreCompileInputs.cache
+C:\Users\CDS07\source\repos\ApiClient\ApiClient\ApiClient\obj\Debug\netstandard2.0\ApiClient.AssemblyInfoInputs.cache
+C:\Users\CDS07\source\repos\ApiClient\ApiClient\ApiClient\obj\Debug\netstandard2.0\ApiClient.AssemblyInfo.cs
