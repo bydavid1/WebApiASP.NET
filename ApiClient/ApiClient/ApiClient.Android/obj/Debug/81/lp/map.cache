@@ -1,6 +1,11 @@
 ApiClient
-System.Runtime
+CommonServiceLocator
 FormsViewGroup
+GalaSoft.MvvmLight
+GalaSoft.MvvmLight.Extras
+GalaSoft.MvvmLight.Platform
+Newtonsoft.Json
+System.Runtime
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Lifecycle.Common
 Xamarin.Android.Arch.Lifecycle.Runtime
@@ -24,8 +29,7 @@ Xamarin.Forms.Core
 Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
-CommonServiceLocator
-GalaSoft.MvvmLight
-GalaSoft.MvvmLight.Extras
-GalaSoft.MvvmLight.Platform
-Newtonsoft.Json
+netstandard
+System.Resources.ResourceManager
+System.ComponentModel
+System.Reflection.Extensions

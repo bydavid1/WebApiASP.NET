@@ -528,11 +528,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CDS07\\source\\repos\\ApiClient\\ApiClient\\ApiClient\\ApiClient.csproj",
+      "projectUniqueName": "C:\\Users\\CDS07\\Desktop\\WebApiASP.NET\\ApiClient\\ApiClient\\ApiClient\\ApiClient.csproj",
       "projectName": "ApiClient",
-      "projectPath": "C:\\Users\\CDS07\\source\\repos\\ApiClient\\ApiClient\\ApiClient\\ApiClient.csproj",
+      "projectPath": "C:\\Users\\CDS07\\Desktop\\WebApiASP.NET\\ApiClient\\ApiClient\\ApiClient\\ApiClient.csproj",
       "packagesPath": "C:\\Users\\CDS07\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CDS07\\source\\repos\\ApiClient\\ApiClient\\ApiClient\\obj\\",
+      "outputPath": "C:\\Users\\CDS07\\Desktop\\WebApiASP.NET\\ApiClient\\ApiClient\\ApiClient\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

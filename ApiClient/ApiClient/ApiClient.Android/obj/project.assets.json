@@ -1007,11 +1007,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CDS07\\source\\repos\\ApiClient\\ApiClient\\ApiClient.Android\\ApiClient.Android.csproj",
+      "projectUniqueName": "C:\\Users\\CDS07\\Desktop\\WebApiASP.NET\\ApiClient\\ApiClient\\ApiClient.Android\\ApiClient.Android.csproj",
       "projectName": "ApiClient.Android",
-      "projectPath": "C:\\Users\\CDS07\\source\\repos\\ApiClient\\ApiClient\\ApiClient.Android\\ApiClient.Android.csproj",
+      "projectPath": "C:\\Users\\CDS07\\Desktop\\WebApiASP.NET\\ApiClient\\ApiClient\\ApiClient.Android\\ApiClient.Android.csproj",
       "packagesPath": "C:\\Users\\CDS07\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CDS07\\source\\repos\\ApiClient\\ApiClient\\ApiClient.Android\\obj\\",
+      "outputPath": "C:\\Users\\CDS07\\Desktop\\WebApiASP.NET\\ApiClient\\ApiClient\\ApiClient.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1028,8 +1028,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "C:\\Users\\CDS07\\source\\repos\\ApiClient\\ApiClient\\ApiClient\\ApiClient.csproj": {
-              "projectPath": "C:\\Users\\CDS07\\source\\repos\\ApiClient\\ApiClient\\ApiClient\\ApiClient.csproj"
+            "C:\\Users\\CDS07\\Desktop\\WebApiASP.NET\\ApiClient\\ApiClient\\ApiClient\\ApiClient.csproj": {
+              "projectPath": "C:\\Users\\CDS07\\Desktop\\WebApiASP.NET\\ApiClient\\ApiClient\\ApiClient\\ApiClient.csproj"
             }
           }
         }

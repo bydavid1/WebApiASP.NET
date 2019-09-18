@@ -2,11 +2,81 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ApiClient.Views.NewPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    
+    <ContentPage.ToolbarItems>
+            <ToolbarItem Text="Guardar"
+                     Command="{Binding Add}"/>
+        </ContentPage.ToolbarItems>
+
+        <ContentPage.Content>
+            <StackLayout Margin="20">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Label 
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Text="Nombres"
+                        VerticalOptions="Center"
+                        TextColor="Black"
+                        />
+                        <Entry 
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Placeholder="Ingrese los nombres"
+                        Text="{Binding nombre}"
+                        />
+                        <Label 
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Text="Apellidos"
+                        VerticalOptions="Center"
+                        TextColor="Black"
+                        />
+                        <Entry 
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Placeholder="Ingrese los apellidos"
+                        Text="{Binding apellido}"
+                        />
+
+                        <Label 
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Text="Edad"
+                        VerticalOptions="Center"
+                        TextColor="Black"
+                        />
+                        <Entry 
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Placeholder="Ingrese la edad"
+                        Text="{Binding edad}"
+                        />
+                    </Grid>
+                    <StackLayout
+                    Grid.Row="1"
+                    BackgroundColor="AliceBlue"
+                    Margin="0,20,0,80">
+                        <Label
+                        Text="Formulario para el registro de personas a nuestra base de datos"
+                        Margin="10"
+                        />
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </ContentPage.Content>
 </ContentPage>

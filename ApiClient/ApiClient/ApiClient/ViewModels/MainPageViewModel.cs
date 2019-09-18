@@ -19,8 +19,6 @@ namespace ApiClient.ViewModels
         private DialogServices _dialogService;
         public ObservableCollection<Cliente> Clientes { get; set; }
 
-
-
         public Cliente Obj
         {
             get { return obj; }
@@ -32,11 +30,8 @@ namespace ApiClient.ViewModels
                     Opcion();
 
                 }
-
             }
         }
-
-
 
         public bool IsRefreshing
         {
@@ -45,7 +40,6 @@ namespace ApiClient.ViewModels
             set { isRefreshing = value; OnPropertyChange(); }
 
         }
-
 
         public ICommand Fresquito
         {
@@ -77,14 +71,14 @@ namespace ApiClient.ViewModels
         {
             Clientes = new ObservableCollection<Cliente>();
             api = new ApiServices();
-            LoadClientes();
             _dialogService = new DialogServices();
+            LoadClientes();
             IsRefreshing = false;
         }
 
         private async void LoadClientes()
         {
-            var response = await api.GetAll<Cliente>("http://10.0.2.2:60424/api/clientes");
+            var response = await api.GetAll<Cliente>("http://10.0.2.2:64449/api/cliente");
             if (!response.IsSuccess)
             {
                 IsRefreshing = false;
@@ -102,7 +96,7 @@ namespace ApiClient.ViewModels
 
             if (opcion == true)
             {
-                await Application.Current.MainPage.Navigation.PushAsync(new UpdatePage(obj));
+                await Application.Current.MainPage.Navigation.PushAsync(new UpdatePage(Obj));
                 Obj = null;
             }
             else
@@ -112,7 +106,7 @@ namespace ApiClient.ViewModels
                 {
                     var id = obj.Id;
 
-                    Uri baseUri = new Uri("http://10.0.2.2:60424/api/clientes/" + id);
+                    Uri baseUri = new Uri("http://10.0.2.2:64449/api/clientes/" + id);
 
                     var response = await api.Delete<Cliente>(baseUri.ToString());
 
