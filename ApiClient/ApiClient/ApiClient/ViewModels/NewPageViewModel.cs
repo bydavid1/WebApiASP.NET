@@ -1,9 +1,6 @@
 ﻿using ApiClient.Models;
 using ApiClient.Services;
 using GalaSoft.MvvmLight.Command;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -20,18 +17,18 @@ namespace ApiClient.ViewModels
         #endregion
 
         #region Propiedades
-        public string nombre
+        public string Nombre
         {
             get { return _nombre; }
             set { _nombre = value; OnPropertyChange(); }
         }
-        public string apellido
+        public string Apellido
         {
             get { return _apellido; }
             set { _apellido = value; OnPropertyChange(); }
         }
 
-        public int edad
+        public int Edad
         {
             get { return _edad; }
             set { _edad = value; OnPropertyChange(); }
@@ -56,22 +53,22 @@ namespace ApiClient.ViewModels
 
         private async void AddNewCliente()
         {
-            if (string.IsNullOrEmpty(nombre))
+            if (string.IsNullOrEmpty(Nombre))
             {
                 await _dialogService.Message("Error", "El nombre es requerido");
                 return;
             }
-            if (string.IsNullOrEmpty(apellido))
+            if (string.IsNullOrEmpty(Apellido))
             {
                 await _dialogService.Message("Error", "El apellido es requerido");
                 return;
             }
-            if (edad <= 0)
+            if (Edad <= 0)
             {
                 await _dialogService.Message("Error", "La edad debe ser mayor a 0");
                 return;
             }
-            if (edad >= 110)
+            if (Edad >= 110)
             {
                 await _dialogService.Message("Error", "La edad debe ser menor a 110");
                 return;
@@ -79,12 +76,12 @@ namespace ApiClient.ViewModels
 
             Cliente client = new Cliente
             {
-                Nombre = this.nombre,
-                Apellido = this.apellido,
-                Edad = this.edad
+                Nombre = this.Nombre,
+                Apellido = this.Apellido,
+                Edad = this.Edad
             };
 
-            var ingresado = await api.Post<Cliente>(client, "http://10.0.2.2:60424/api/clientes");
+            var ingresado = await api.Post<Cliente>(client, "http://10.0.2.2:64449/api/cliente");
 
             if (!ingresado.IsSuccess)
             {

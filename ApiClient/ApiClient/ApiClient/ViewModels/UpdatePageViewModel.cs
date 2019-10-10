@@ -23,8 +23,6 @@ namespace ApiClient.ViewModels
         private Cliente old;
 
         #endregion
-
-        //Asignandole en el get los valores de la Persona old
         #region Propiedades
         public string Nombre
         {
@@ -56,7 +54,6 @@ namespace ApiClient.ViewModels
         #region Constructor
         public UpdatePageViewModel(Cliente obj)
         {
-            //Llenando el objeto con el recibido
             api = new ApiServices();
             this.old = obj;
             _dialogService = new DialogServices();
@@ -65,7 +62,6 @@ namespace ApiClient.ViewModels
 
         private async void UpdatePerson()
         {
-            //Utilizando los atributos para llenar los nuevos datos de la Persona
             if (string.IsNullOrEmpty(_nombre))
             {
                 await _dialogService.Message("Error", "El nombre es requerido");
@@ -86,22 +82,18 @@ namespace ApiClient.ViewModels
                 await _dialogService.Message("Error", "La edad debe ser menor a 110");
                 return;
             }
-            //if (_edad.Equals(null))
-            //{
-            //    await _dialogService.Message("Error", "Llene el campo edad");
-            //    return;
-            //}
+
+            var id = old.Id;
 
             Cliente client = new Cliente
             {
+                Id = id,
                 Nombre = this._nombre,
                 Apellido = this._apellido,
                 Edad = this._edad,
-
             };
 
-            var id = old.Id;
-            Uri baseUri = new Uri("http://10.0.2.2:60424/api/clientes/" + id);
+            Uri baseUri = new Uri("http://10.0.2.2:64449/api/cliente/");
 
             var ingresado = await api.Put<Cliente>(baseUri.ToString(), client);
             if (!ingresado.IsSuccess)

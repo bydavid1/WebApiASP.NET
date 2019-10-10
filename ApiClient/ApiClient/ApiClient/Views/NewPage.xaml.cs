@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ApiClient.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace ApiClient.Views
 		public NewPage ()
 		{
 			InitializeComponent ();
+            BindingContext = new NewPageViewModel();
 		}
 	}
 }

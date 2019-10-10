@@ -41,15 +41,15 @@ namespace ApiClient.ViewModels
 
         }
 
-        public ICommand Fresquito
+        public ICommand Refreshing
         {
             get
             {
-                return new RelayCommand(Freskitok);
+                return new RelayCommand(Refresh);
             }
         }
 
-        public ICommand NewPerson
+        public ICommand NewClient
 
         {
             get
@@ -59,7 +59,7 @@ namespace ApiClient.ViewModels
         }
 
 
-        private void Freskitok()
+        private void Refresh()
         {
             IsRefreshing = true;
             LoadClientes();
@@ -92,7 +92,7 @@ namespace ApiClient.ViewModels
 
         private async void Opcion()
         {
-            bool opcion = await _dialogService.Message("Opciones", "Seleccione lo que desee hacer", "Actualizar", "Eliminar");
+            bool opcion = await _dialogService.Message("Opciones", "Seleccione...", "Actualizar", "Eliminar");
 
             if (opcion == true)
             {
@@ -101,13 +101,11 @@ namespace ApiClient.ViewModels
             }
             else
             {
-                bool respuesta = await _dialogService.Message("Confirmacion", "Desea eliminar este registro?", "Aceptar", "Cancelar");
+                var respuesta = await _dialogService.Message("Confirmacion", "¿Desea eliminar este cliente?", "Aceptar", "Cancelar");
                 if (respuesta == true)
                 {
                     var id = obj.Id;
-
-                    Uri baseUri = new Uri("http://10.0.2.2:64449/api/clientes/" + id);
-
+                    Uri baseUri = new Uri("http://10.0.2.2:64449/api/cliente/" + id);
                     var response = await api.Delete<Cliente>(baseUri.ToString());
 
                     if (!response.IsSuccess)
@@ -116,12 +114,15 @@ namespace ApiClient.ViewModels
                         await App.Current.MainPage.DisplayAlert("Error", response.Message, "Ok");
                         return;
                     }
-                    await _dialogService.Message("Exito!", "Registro eliminado");
+                    await _dialogService.Message("Eliminado", "Registro eliminado");
                     LoadClientes();
+                }
+                else
+                {
+                    Obj = null;
                 }
             }
         }
-
 
         private void NewPage()
         {

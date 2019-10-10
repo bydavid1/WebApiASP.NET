@@ -66,15 +66,6 @@
                         Text="{Binding Edad}"
                         />
                 </Grid>
-                <StackLayout
-                    Grid.Row="1"
-                    BackgroundColor="AliceBlue"
-                    Margin="0,20,0,80">
-                    <Label
-                        Text="Formulario para el registro de personas a nuestra base de datos"
-                        Margin="10"
-                        />
-                </StackLayout>
             </Grid>
         </StackLayout>
     </ContentPage.Content>
